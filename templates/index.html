@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link href="/static/css/common.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    {{name}} <br/>
+
+    {% for user in _list %}
+        name: {{user.name}}, age: {{user.age}}.<br/>
+    {% endfor %}
+
+    <form action="/add">
+        <input type="text" name="username">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
